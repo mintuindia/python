@@ -1,0 +1,72 @@
+""""Arithmatic Function Using Switch Case"""
+print("\n\t\t *****************      Perform Arithmmatic Functions       *************"
+                        "\n\t\t\t\t\tChoose your choise which you want to Perform"
+                        "\n\t\t\t\t\t 1: Addition"
+                        "\n\t\t\t\t\t 2: Subtraction"
+                        "\n\t\t\t\t\t 3: Multiplication "
+                        "\n\t\t\t\t\t 4: Divition"
+                        "\n\t\t\t\t\t 5: Square Root"
+                        "\n\t\t\t\t\t 6: Cube Root"
+                        "\n\t\t\t\t\t 0: default")
+def Addition():
+    print("\n\t\t\t\t\tEnter Two number which are want to Add ")
+    num1 = int(input("\t\t\t\t\tEnter First number: "))
+    num2 = int(input("\t\t\t\t\tEnter First number: "))
+    sum = num1 + num2
+    print(f"\t\t\t\t\tSum of {num1} and {num2} is {sum}")
+    return "\t\t\t\t\tThank You"
+
+def Subtraction():
+    print("\n\t\t\t\t\tEnter Two number which are want to Substract:- ")
+    num1 = int(input("\t\t\t\t\tEnter First number: "))
+    num2 = int(input("\t\t\t\t\tEnter First number: "))
+    sub = num1 - num2
+    print(f"\t\t\t\t\tSubstraction of {num1} and {num2} is {sub}")
+    return "\t\t\t\t\tThank You"
+
+def Multiplication():
+    print("\n\t\t\t\t\tEnter Two number which are want to Multiply:- ")
+    num1 = int(input("\t\t\t\t\tEnter First number: "))
+    num2 = int(input("\t\t\t\t\tEnter First number: "))
+    mul = num1 * num2
+    print(f"\t\t\t\t\tMultiplication of {num1} and {num2} is {mul}")
+    return "\t\t\t\t\tThank You"
+
+def Divition():
+    print("\n\t\t\t\t\tEnter Two number which are want to Division:- ")
+    num1 = int(input("\t\t\t\t\tEnter First number: "))
+    num2 = int(input("\t\t\t\t\tEnter First number: "))
+    div = num1 / num2
+    print(f"\t\t\t\t\tDivision of {num1} by {num2} is {div}")
+    return "\t\t\t\t\tThank You"
+
+def Square_Root():
+    print("\n\t\t\t\t\tEnter Two number which are want to Square Root:- ")
+    base_number = int(input("\t\t\t\t\tEnter Base number : "))
+    sqrRoot = base_number ** 2
+    print(f"\t\t\t\t\tSquare Root of {base_number} is {sqrRoot}")
+    return "\t\t\t\t\tThank You"
+def Cube_Root():
+    print("\n\t\t\t\t\tEnter Two number which are want to Cute Root:- ")
+    base_number = int(input("\t\t\t\t\tEnter Base number : "))
+    cubeRoot = base_number ** 3
+    print(f"\t\t\t\t\tCube Root of {base_number} is {cubeRoot}")
+    return "\t\t\t\t\tThank You"
+def default():
+    return exit()
+
+switchCase = {
+    1: Addition,
+    2: Subtraction,
+    3: Multiplication,
+    4: Divition,
+    5: Square_Root,
+    6: Cube_Root,
+    0: default
+}
+
+def arithmaticOptions(choice):
+    return switchCase.get(choice,default)()
+
+data = int(input("\n\t\t\t\t\tEnter Your Choice: "))
+print(arithmaticOptions(data))
